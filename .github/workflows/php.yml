@@ -7,9 +7,10 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  setup:
     runs-on: ubuntu-latest
+    container:
+      image: drupal
     steps:
       - run: echo "This is demo"
 #     - uses: actions/checkout@v2
