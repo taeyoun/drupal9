@@ -12,7 +12,7 @@ jobs:
     container:
       image: drupal
     steps:
-      - run: echo "This is demo"
+      - run: drush si
 #     - uses: actions/checkout@v2
 
 #     - name: Validate composer.json and composer.lock
