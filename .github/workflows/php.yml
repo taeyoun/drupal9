@@ -23,13 +23,14 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Build project
-        run: |
-          robo job:build
+      - name: Current working directory
+        run: pwd
 
-      - name: Run PHPUnit tests
-        run: vendor/bin/robo job:unit-tests
+      - name: List dir
+        run: ls -al
 
+      - name: Run composer
+        run: composer install
 
 #     - uses: actions/checkout@v2
 
