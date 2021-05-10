@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: juampynr/drupal8ci:latest
-      
+
     services:
       mariadb:
         image: quay.io/juampynr/drupal8-github-actions:latest
@@ -23,14 +23,11 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Current working directory
-        run: pwd
+#      - name: Run composer
+#        run: composer install
 
-      - name: List dir
-        run: ls -al
-
-      - name: Run composer
-        run: composer install
+      - name: Install drupal
+        run: drush si minimal --db-url=mysql://root:root@localhost:33306/drupal9 --account-name=admin --account-pass=admin --account-mail=no-reply@mail.com
 
 #     - uses: actions/checkout@v2
 
