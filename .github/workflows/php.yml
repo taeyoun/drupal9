@@ -27,7 +27,7 @@ jobs:
 #        run: composer install
 
       - name: Install drupal
-        run: vendor/bin/drush si minimal --db-url=mysql://root:root@localhost:33306/drupal9 --account-name=admin --account-pass=admin --account-mail=no-reply@mail.com
+        run: vendor/bin/drush si minimal --db-url=mysql://root:root@localhost:3306/drupal9 --account-name=admin --account-pass=admin --account-mail=no-reply@mail.com
 
 #     - uses: actions/checkout@v2
 
